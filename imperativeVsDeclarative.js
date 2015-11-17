@@ -1,11 +1,7 @@
-
-const array = [1,2,3];
-filter((item) => item !== 3, array)
-// [1, 2]
-
-function filter(predicate, arr) {
-  var out = []
-  for (var i = 0 ; i < arr.length ; i++) {
+// Imperative
+const filter = (predicate, arr) => {
+  let out = []
+  for (let i = 0 ; i < arr.length ; i++) {
     if (predicate(arr[i], i, arr)) {
       out.push(arr[i])
     }
@@ -13,4 +9,9 @@ function filter(predicate, arr) {
   return out
 }
 
-const filter = (predicate, arr) => filter(predicate, array)
+// Declarative
+const filter = (predicate, arr) => array.filter(predicate)
+
+const array = [1,2,3];
+filter((item) => item !== 3, array)
+// [1, 2]
