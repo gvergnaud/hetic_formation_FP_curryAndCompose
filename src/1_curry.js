@@ -25,10 +25,10 @@ console.log(myFunc(allan)('moustache')('gabriel'))
 // sur la librairie Ramda, map est curryé par défault, on peut donc lui passer
 // les params en différé
 
-// concatValue :: a -> [a] -> [a]
+// concatValue :: a -> [b] -> [c]
 const concatValue = value => map((item, i, array) => item + value)
 
-// concatPaul :: [a] -> [a]
+// concatPaul :: [a] -> [String]
 const concatPaul = concatValue('Paul')
 
 const arr = concatPaul(['Allan'])
